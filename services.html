@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Service | RS Electrician Hub</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/img/logo.png" />
+</head>
+<body data-lang="en">
+  <!-- reuse same header / footer as index.html minimal markup -->
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" class="brand">
+          <img src="assets/img/logo.png" alt="RS Electrician" class="logo-img" />
+          <span class="brand-text">RS Electrician Hub</span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <button id="lang-toggle" class="lang-btn">हिंदी</button>
+        <button class="hamburger" aria-label="menu">☰</button>
+        <div class="menu">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="services.html" data-i18n="nav.services">Services</a>
+          <a href="price.html" data-i18n="nav.price">Price List</a>
+          <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+          <a href="feedback.html" data-i18n="nav.feedback">Feedback</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="card">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <h1 id="service-title">Service Title</h1>
+            <p id="service-sub" style="color:#cbd5e1;">Service subtitle</p>
+          </div>
+          <div class="cta-group">
+            <a class="btn btn-yellow" href="book.html" data-i18n="services.book">Book Now</a>
+            <a class="btn" id="wa-service" target="_blank">WhatsApp</a>
+            <a class="btn" id="call-service" href="tel:6389293604">Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <div class="card" id="process-card">
+          <h2 data-i18n="services.process">Work Process</h2>
+          <ol id="process-list"></ol>
+        </div>
+        <div class="card">
+          <h2 data-i18n="services.benefits">Benefits</h2>
+          <ul>
+            <li data-i18n="services.benefit1">Experienced & certified electrician</li>
+            <li data-i18n="services.benefit2">Genuine materials & neat finishing</li>
+            <li data-i18n="services.benefit3">Upfront pricing & invoice</li>
+            <li data-i18n="services.benefit4">Service warranty</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2 data-i18n="services.price">Price List</h2>
+          <table id="service-prices">
+            <thead><tr><th data-i18n="price.job">Job</th><th data-i18n="price.price">Price</th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <p style="color:#9ca3af; font-size:12px;" data-i18n="price.note">*Final quote after site inspection. Taxes/materials extra if applicable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2 data-i18n="contact.quick_title">Quick Contact</h2>
+      <form onsubmit="event.preventDefault(); submitMailto(this, i18n('email.subject_service') + ' - ' + i18nService('title'));">
+        <div class="grid" style="grid-template-columns:1fr 1fr 1fr;">
+          <input name="name" placeholder="" data-placeholder-i18n="form.name" required>
+          <input name="phone" placeholder="" data-placeholder-i18n="form.phone" required>
+          <input name="city" placeholder="" data-placeholder-i18n="form.city">
+        </div>
+        <textarea name="message" rows="3" placeholder="" data-placeholder-i18n="form.message"></textarea>
+        <div class="cta-group">
+          <button class="btn btn-yellow" type="submit" data-i18n="contact.send_email">Send Email</button>
+          <a class="btn" id="wa-contact" target="_blank">WhatsApp</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <img src="assets/img/logo.png" alt="RS Electrician" style="height:44px; margin-bottom:8px;">
+        <p data-i18n="footer.desc">Professional electrician services in your city. Quick response, transparent pricing, and reliable work.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.links">Quick Links</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="price.html" data-i18n="nav.price">Price List</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span class="year"></span> RS Electrician Hub. All rights reserved.</div>
+  </footer>
+
+  <a class="floating-wa" id="floating-wa" target="_blank">WhatsApp</a>
+
+  <script src="assets/app.js"></script>
+  <script>
+    // On load, read ?service=slug and render content
+    (function(){
+      const params = new URLSearchParams(location.search);
+      const s = params.get('service') || 'home-wiring-rewiring';
+      window.RS_CURRENT_SERVICE = s;
+      window.renderServicePage(s);
+    })();
+  </script>
+</body>
+        </html>
