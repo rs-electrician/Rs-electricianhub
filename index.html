@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RS Electrician Hub</title>
+  <meta name="description" content="RS Electrician Hub - Professional electrician services" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/img/logo.png" />
+</head>
+<body data-lang="en">
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" class="brand">
+          <img src="assets/img/logo.png" alt="RS Electrician" class="logo-img" />
+          <span class="brand-text">RS Electrician Hub</span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <button id="lang-toggle" class="lang-btn">हिंदी</button>
+        <button class="hamburger" aria-label="menu">☰</button>
+        <div class="menu">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="services.html?service=home-wiring-rewiring" data-i18n="nav.services">Services</a>
+          <a href="price.html" data-i18n="nav.price">Price List</a>
+          <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+          <a href="feedback.html" data-i18n="nav.feedback">Feedback</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+          <a href="book.html" class="btn btn-book" data-i18n="nav.book">Book Service</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <span class="badge" data-i18n="hero.badge">Fast • Reliable • Expert</span>
+        <h1 data-i18n="hero.title">Trusted Electrician for Homes & Offices</h1>
+        <p data-i18n="hero.desc">From wiring to lighting, repairs to installations — professional service with transparent pricing.</p>
+        <div class="cta-group">
+          <a href="book.html" class="btn btn-primary" data-i18n="hero.book">Book Service</a>
+          <a class="btn btn-outline" id="wa-home" target="_blank">WhatsApp</a>
+        </div>
+        <div class="contact-mini" data-i18n="hero.contact_small">Call: <a href="tel:6389293604">6389293604</a> · Email: <a href="mailto:rselectrician9283@gmail.com">rselectrician9283@gmail.com</a></div>
+      </div>
+      <div class="hero-right">
+        <img src="assets/img/hero-placeholder.svg" alt="Electrician banner" class="hero-graphic" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 data-i18n="about.title">About RS-Electrician Hub</h2>
+      <p data-i18n="about.desc">RS Electrician Hub provides skilled electrical services: home wiring, lighting upgrades, appliance repair, inverter & CCTV work — reliable, safe & affordable.</p>
+    </section>
+
+    <section class="section">
+      <h2 data-i18n="services.title">Our Services</h2>
+      <div class="grid services-grid" id="services-grid">
+        <!-- JS will inject service cards -->
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 data-i18n="testimonials.title">Happy Customers</h2>
+      <div id="home-testimonials" class="testimonials"></div>
+    </section>
+
+    <section class="section card">
+      <h2 data-i18n="contact.quick_title">Quick Contact</h2>
+      <form onsubmit="event.preventDefault(); submitMailto(this, i18n('email.subject_quick'));">
+        <div class="grid" style="grid-template-columns: 1fr 1fr 1fr;">
+          <input name="name" placeholder="" data-placeholder-i18n="form.name" required>
+          <input name="phone" placeholder="" data-placeholder-i18n="form.phone" required>
+          <input name="city" placeholder="" data-placeholder-i18n="form.city">
+        </div>
+        <textarea name="message" rows="3" placeholder="" data-placeholder-i18n="form.message"></textarea>
+        <div class="cta-group">
+          <button class="btn btn-yellow" type="submit" data-i18n="contact.send_email">Send Email</button>
+          <a class="btn" id="wa-quick" target="_blank">WhatsApp</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <img src="assets/img/logo.png" alt="RS Electrician" style="height:44px; margin-bottom:8px;">
+        <p data-i18n="footer.desc">Professional electrician services in your city. Quick response, transparent pricing, and reliable work.</p>
+        <p><strong data-i18n="footer.owner_lbl">Owner:</strong> Rishabh Tripathi</p>
+        <p><strong data-i18n="footer.phone_lbl">Phone:</strong> <a href="tel:6389293604">6389293604</a><br>
+           <strong data-i18n="footer.email_lbl">Email:</strong> <a href="mailto:rselectrician9283@gmail.com">rselectrician9283@gmail.com</a></p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.links">Quick Links</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="price.html" data-i18n="nav.price">Price List</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="feedback.html" data-i18n="nav.feedback">Feedback</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.book">Book Now</h4>
+        <p data-i18n="footer.whatsapp_note">Click to chat on WhatsApp:</p>
+        <p><a class="btn btn-multicolor" id="wa-footer" target="_blank">WhatsApp Booking</a></p>
+        <p><a class="btn btn-yellow" href="book.html" data-i18n="nav.book">Book Service</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span class="year"></span> RS Electrician Hub. All rights reserved.</div>
+  </footer>
+
+  <a class="floating-wa" id="floating-wa" target="_blank">WhatsApp</a>
+
+  <script src="assets/app.js"></script>
+</body>
+        </html>
