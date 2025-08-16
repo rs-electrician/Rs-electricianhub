@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Service | RS Electrician Hub</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/img/logo.png" />
+</head>
+<body data-lang="en">
+  <header>
+    <nav class="nav">
+      <div class="nav-left"><a href="index.html" class="brand"><img src="assets/img/logo.png" class="logo-img"><span class="brand-text">RS Electric Hub</span></a></div>
+      <div class="nav-right">
+        <button id="lang-toggle" class="lang-btn">हिंदी</button>
+        <div class="menu">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="book.html" data-i18n="nav.book">Book Service</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1 data-i18n="book.title">Book a Service</h1>
+      <div class="card">
+        <form id="booking-form">
+          <div class="grid" style="grid-template-columns:1fr 1fr 1fr;">
+            <input name="name" placeholder="" data-placeholder-i18n="form.name" required>
+            <input name="phone" placeholder="" data-placeholder-i18n="form.phone" required>
+            <input name="preferred_date" type="date" required>
+          </div>
+          <div class="grid" style="grid-template-columns:1fr 1fr;">
+            <select name="service" required>
+              <option value="">Select Service</option>
+              <option>Home Wiring & Rewiring</option>
+              <option>Lighting Installation</option>
+              <option>Appliance Repair</option>
+              <option>Fan Installation & Repair</option>
+              <option>Switchboard Installation & Repair</option>
+              <option>Inverter & Battery Installation/Repair</option>
+              <option>CCTV Camera Installation</option>
+              <option>Door Bell & Intercom Installation</option>
+              <option>Water Motor & Pump Wiring</option>
+              <option>Emergency Electrical Repair</option>
+            </select>
+            <input name="location" placeholder="" data-placeholder-i18n="form.location" required>
+          </div>
+          <textarea name="notes" rows="3" placeholder="" data-placeholder-i18n="form.notes"></textarea>
+          <div class="cta-group">
+            <button class="btn btn-multicolor" type="submit" data-i18n="book.confirm">Confirm on WhatsApp</button>
+            <a class="btn" target="_blank" id="wa-chat-first">Chat First</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-bottom">© <span class="year"></span> RS Electrician Hub.</div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
