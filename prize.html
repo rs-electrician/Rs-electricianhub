@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Price List | RS Electrician Hub</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/img/logo.png" />
+</head>
+<body data-lang="en">
+  <!-- header (same as index) -->
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" class="brand"><img src="assets/img/logo.png" class="logo-img" alt="logo"><span class="brand-text">RS Electrician Hub</span></a>
+      </div>
+      <div class="nav-right">
+        <button id="lang-toggle" class="lang-btn">हिंदी</button>
+        <button class="hamburger" aria-label="menu">☰</button>
+        <div class="menu">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="services.html" data-i18n="nav.services">Services</a>
+          <a href="price.html" data-i18n="nav.price">Price List</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1 data-i18n="price.title">Price List</h1>
+      <p data-i18n="price.desc">Indicative labour pricing. Final quote will depend on site condition and materials.</p>
+
+      <div class="card">
+        <h2 data-i18n="service.home_wiring">Home Wiring & Rewiring</h2>
+        <table>
+          <tbody>
+            <tr><td data-i18n="price.point_wiring">Point wiring</td><td>₹600 - ₹1,200</td></tr>
+            <tr><td data-i18n="price.full_rewiring">Full home rewiring</td><td>₹20,000 - ₹60,000</td></tr>
+            <tr><td data-i18n="price.mcb_upgrade">MCB/DB upgrade</td><td>₹1,500 - ₹4,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2 data-i18n="service.lighting">Lighting Installation</h2>
+        <table>
+          <tbody>
+            <tr><td data-i18n="price.led_install">LED tube/panel</td><td>₹250 - ₹600</td></tr>
+            <tr><td data-i18n="price.chandelier">Chandelier</td><td>₹1,500 - ₹4,000</td></tr>
+            <tr><td data-i18n="price.dimmer">Dimmer setup</td><td>₹400 - ₹900</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2 data-i18n="service.appliance">Appliance & Fans</h2>
+        <table>
+          <tbody>
+            <tr><td data-i18n="price.geyser">Geyser install/repair</td><td>₹500 - ₹1,200</td></tr>
+            <tr><td data-i18n="price.microwave">Microwave inspection</td><td>₹300 - ₹700</td></tr>
+            <tr><td data-i18n="price.fans">Ceiling/Exhaust fan</td><td>₹300 - ₹700</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2 data-i18n="service.others">Security & Other</h2>
+        <table>
+          <tbody>
+            <tr><td data-i18n="price.cctv">CCTV setup (per camera)</td><td>₹800 - ₹1,800</td></tr>
+            <tr><td data-i18n="price.doorbell">Doorbell/Intercom</td><td>₹200 - ₹1,800</td></tr>
+            <tr><td data-i18n="price.pump">Water pump wiring</td><td>₹1,200 - ₹3,500</td></tr>
+            <tr><td data-i18n="price.emergency">Emergency visit</td><td>₹700 - ₹1,500</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <img src="assets/img/logo.png" alt="RS Electrician" style="height:44px; margin-bottom:8px;">
+        <p data-i18n="footer.desc">Professional electrician services in your city.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span class="year"></span> RS Electrician Hub. All rights reserved.</div>
+  </footer>
+
+  <a class="floating-wa" id="floating-wa" target="_blank">WhatsApp</a>
+  <script src="assets/app.js"></script>
+</body>
+  </html>
